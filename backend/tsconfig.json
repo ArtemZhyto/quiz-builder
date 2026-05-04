@@ -20,7 +20,8 @@
       "@middlewares/*": ["./src/middlewares/*"],
       "@routes/*": ["./src/routes/*"],
       "@services/*": ["./src/services/*"],
-      "@src/*": ["./src/*"]
+      "@src/*": ["./src/*"],
+      "@/*": ["./*"]
     },
     "types": ["node"]
   },
