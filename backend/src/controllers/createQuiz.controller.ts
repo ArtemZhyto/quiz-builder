@@ -1,7 +1,6 @@
 import { Request, Response } from 'express'
 import { z } from 'zod'
 import PRISMA from '@src/prisma'
-import { log } from '@services/logger'
 
 const quizSchema = z.object({
   title: z.string().min(1, 'Title is required'),

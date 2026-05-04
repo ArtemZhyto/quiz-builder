@@ -2,8 +2,6 @@ import { Request, Response } from 'express'
 
 import PRISMA from '@src/prisma'
 
-import { log } from '@services/logger'
-
 export const quiz = async (req: Request, res: Response) => {
   try {
     const { id } = req.params

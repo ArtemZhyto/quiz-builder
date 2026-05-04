@@ -2,8 +2,6 @@ import { Request, Response } from 'express'
 
 import PRISMA from '@src/prisma'
 
-import { log } from '@services/logger'
-
 export const quizzes = async (_req: Request, res: Response) => {
   try {
     const data = await PRISMA.quiz.findMany({

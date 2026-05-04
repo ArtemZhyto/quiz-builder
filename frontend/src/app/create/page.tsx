@@ -14,7 +14,7 @@ type Question = {
 }
 
 export default function CreatePage() {
-  const router = useRouter()
+  const router = useRouter() 
   const [title, setTitle] = useState('')
   const [questions, setQuestions] = useState<Question[]>([])
 
