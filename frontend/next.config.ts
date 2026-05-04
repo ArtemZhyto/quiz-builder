@@ -15,9 +15,9 @@ const nextConfig: NextConfig = {
         {
           key: 'Content-Security-Policy',
           value:
-            "frame-src 'self' https://www.google.com; " +
-            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com; " +
-            "connect-src 'self' http://localhost:5000 http://127.0.0.1:5000;",
+            'frame-src \'self\' https://www.google.com; ' +
+            'script-src \'self\' \'unsafe-inline\' \'unsafe-eval\' https://www.google.com https://www.gstatic.com; ' +
+            'connect-src \'self\' http://localhost:5000 http://127.0.0.1:5000;',
         },
       ],
     },
