@@ -1,0 +1,23 @@
+services:
+  backend:
+    build:
+      context: ../
+      dockerfile: dockerfile
+    volumes:
+      - ../src:/app/src
+      - ../package.json:/app/package.json
+      - ../package-lock.json:/app/backend/package-lock.json
+      - /app/node_modules
+      - /app/dist
+    command: npm run dev # Use dev for hot-reloading during development
+    env_file:
+      - .env
+      - .env.prod
+    ports:
+      - '${PORT}:${PORT}'
+    networks: [app-network]
+
+networks:
+  app-network:
+    external: true
+    name: quiz-builder

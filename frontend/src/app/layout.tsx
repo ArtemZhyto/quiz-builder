@@ -1,5 +1,5 @@
 // Styles
-import '../global.css'
+import './global.css'
 
 // Types
 import { LocalesLayoutT } from '@shared-types/layouts'

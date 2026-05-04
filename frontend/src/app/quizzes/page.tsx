@@ -1,5 +1,5 @@
-const Create = () => {
-  return <div>Create</div>
+const Quizzes = () => {
+  return <div>Quizzes</div>
 }
 
-export default Create
+export default Quizzes

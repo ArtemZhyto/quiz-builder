@@ -1,0 +1,16 @@
+services:
+  backend:
+    build:
+      context: ../
+      dockerfile: backend/dockerfile
+    env_file:
+      - .env
+      - .env.prod
+    ports:
+      - '${PORT}:${PORT}'
+    networks: [app-network]
+
+networks:
+  app-network:
+    external: true
+    name: quiz-builder
