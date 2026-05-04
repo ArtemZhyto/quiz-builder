@@ -1,0 +1,5 @@
+# **/_EXAMPLES
+**/node_modules
+**/.next
+# **/.env
+# **/.env.prod
