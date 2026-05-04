@@ -1,4 +1,3 @@
-// Modules
 import eslint from '@eslint/js'
 import tseslint from 'typescript-eslint'
 import reactPlugin from 'eslint-plugin-react'

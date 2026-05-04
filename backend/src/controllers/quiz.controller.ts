@@ -2,15 +2,15 @@ import { Request, Response } from 'express'
 
 import PRISMA from '@src/prisma'
 
+import { log } from '@services/logger'
+
 export const quiz = async (req: Request, res: Response) => {
   try {
     const { id } = req.params
 
     const data = await PRISMA.quiz.findUnique({
       where: { id: id as string },
-      include: {
-        questions: true,
-      },
+      include: { questions: true },
     })
 
     if (!data) {
@@ -18,8 +18,10 @@ export const quiz = async (req: Request, res: Response) => {
     }
 
     return res.json(data)
-  } catch (err) {
-    console.error(err)
-    return res.status(500).json({ error: 'Failed to fetch quiz' })
+  } catch (err: any) {
+    return res.status(500).json({
+      error: 'Failed to fetch quiz',
+      message: err?.message,
+    })
   }
 }

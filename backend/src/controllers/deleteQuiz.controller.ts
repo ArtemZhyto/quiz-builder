@@ -2,6 +2,8 @@ import { Request, Response } from 'express'
 
 import PRISMA from '@src/prisma'
 
+import { log } from '@services/logger'
+
 export const deleteQuiz = async (req: Request, res: Response) => {
   try {
     const { id } = req.params
@@ -11,8 +13,10 @@ export const deleteQuiz = async (req: Request, res: Response) => {
     })
 
     return res.json({ success: true })
-  } catch (err) {
-    console.error(err)
-    return res.status(500).json({ error: 'Failed to delete quiz' })
+  } catch (err: any) {
+    return res.status(500).json({
+      error: 'Failed to delete quiz',
+      message: err?.message,
+    })
   }
 }

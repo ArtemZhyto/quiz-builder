@@ -6,7 +6,6 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "./generated/client"
 }
 
 datasource db {
@@ -17,6 +16,7 @@ model Quiz {
   id        String     @id @default(uuid())
   title     String
   questions Question[]
+  createdAt DateTime   @default(now())
 }
 
 model Question {
@@ -24,6 +24,6 @@ model Question {
   type     String
   question String
   options  String[]
-  quizId   String
   quiz     Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  quizId   String
 }

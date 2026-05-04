@@ -19,9 +19,6 @@
       }
     ],
     "paths": {
-      "@components/*": ["./src/components/*"],
-      "@services/*": ["./src/services/*"],
-      "@shared-types/*": ["./src/types/*"],
       "@utils/*": ["./src/utils/*"],
       "@/*": ["./*"]
     },
