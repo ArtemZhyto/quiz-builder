@@ -10,8 +10,8 @@
   "scripts": {
     "dev": "nodemon",
     "build": "tsc -p tsconfig.json && tsc-alias",
-    "start": "node dist/services/auth/src/server.js",
-    "go": "npm run build & npm start"
+    "start": "node dist/src/server.js",
+    "go": "npm run build && npm start"
   },
   "dependencies": {
     "cookie-parser": "^1.4.7",

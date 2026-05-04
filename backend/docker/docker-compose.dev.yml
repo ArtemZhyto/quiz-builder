@@ -1,12 +1,12 @@
 services:
-  backend:
+  quiz-backend:
     build:
       context: ../
       dockerfile: dockerfile
     volumes:
       - ../src:/app/src
       - ../package.json:/app/package.json
-      - ../package-lock.json:/app/backend/package-lock.json
+      - ../package-lock.json:/app/package-lock.json
       - /app/node_modules
       - /app/dist
     command: npm run dev # Use dev for hot-reloading during development

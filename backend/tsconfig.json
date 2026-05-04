@@ -20,11 +20,10 @@
       "@middlewares/*": ["./src/middlewares/*"],
       "@routes/*": ["./src/routes/*"],
       "@services/*": ["./src/services/*"],
-      "@src/*": ["./src/*"],
-      "@ts/*": ["./ts/*"]
+      "@src/*": ["./src/*"]
     },
     "types": ["node"]
   },
-  "include": ["src/**/*", "ts/**/*", "tests/**/*", "prisma.config.ts"],
+  "include": ["src/**/*", "prisma.config.ts"],
   "exclude": ["node_modules", "dist"]
 }

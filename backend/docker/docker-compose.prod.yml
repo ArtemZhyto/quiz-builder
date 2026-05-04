@@ -1,8 +1,8 @@
 services:
-  backend:
+  quiz-backend:
     build:
       context: ../
-      dockerfile: backend/dockerfile
+      dockerfile: dockerfile
     env_file:
       - .env
       - .env.prod
